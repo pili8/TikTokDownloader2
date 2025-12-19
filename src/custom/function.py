@@ -62,6 +62,14 @@ async def suspend(count: int, console: "ColorfulConsole") -> None:
     # pass
 
 
+"""Web API 接口模式 和 Web UI 交互模式 token 参数验证"""
 def is_valid_token(token: str) -> bool:
     """Web API 接口模式 和 Web UI 交互模式 token 参数验证"""
-    return True
+    # 自定义有效 token 列表，可替换为你的实际 token
+    valid_tokens = [
+        "6056789",
+        "another_token_456"
+    ]
+    # 验证输入的 token 是否在有效列表中
+    return token in valid_tokens
+
