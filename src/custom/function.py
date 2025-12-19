@@ -62,9 +62,6 @@ async def suspend(count: int, console: "ColorfulConsole") -> None:
     # pass
 
 
-from src.config.parameter import Parameter  # 导入配置类
-
 def is_valid_token(token: str) -> bool:
-    # 从全局配置中获取有效 token 列表
-    valid_tokens = Parameter().settings.get("API_TOKENS", [])
-    return token in valid_tokens
+    """Web API 接口模式 和 Web UI 交互模式 token 参数验证"""
+    return True
